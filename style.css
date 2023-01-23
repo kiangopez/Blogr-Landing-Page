@@ -1,0 +1,304 @@
+:root {
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%); /* (CTA hover background) */
+  --very-dark-blue: hsl(208, 49%, 24%); /* (headings) */
+
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%); /* (footer text) */
+  --very-dark-grayish-blue: hsl(207, 13%, 34%); /* (body copy) */
+  --very-dark-black-blue: hsl(240, 10%, 16%); /* (footer background) */
+
+  /* Background gradient - Intro/CTA mobile nav: */
+
+  --v-light-red: hsl(13, 100%, 72%);
+  --l-red: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --v-dark-gray-blue: hsl(237, 17%, 21%);
+  --v-dark-saturated-blue: hsl(237, 23%, 32%);
+
+  /* Fonts */
+  --overpass: "Overpass", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.close {
+  display: none;
+}
+
+header {
+  background-color: var(--light-red);
+  padding: 0 20px;
+  padding-top: 30px;
+  width: 100%;
+  border-radius: 0 0 0 100px;
+  background-image: url("./images/bg-pattern-intro-mobile.svg");
+  background-position: calc(50% + 100px);
+  background-repeat: no-repeat;
+}
+
+.logo {
+  font-family: var(--ubuntu);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--white);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  width: 89%;
+  margin: 0 auto;
+  text-align: center;
+  cursor: initial;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+  display: none;
+}
+.nav-links.active {
+  display: flex;
+}
+.open.active {
+  display: none;
+}
+.close.active {
+  display: block;
+}
+.nav-links ul {
+  width: 100%;
+}
+.nav-links ul li {
+  color: black;
+  font-family: var(--overpass);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 0;
+  position: relative;
+}
+/* .nav-links .dropdown {
+} */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+  border-top: 1px solid black;
+}
+.nav-cta button {
+  border: none;
+  color: white;
+  font-family: var(--overpass);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 0;
+  width: 150px;
+  background: var(--light-red);
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--white);
+}
+.nav-cta .white-bg {
+  background: white;
+  color: black;
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Nav Responsive Dropdown */
+.dropdown {
+  display: none;
+  background: var(--grayish-blue);
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+/* Nav Responsive Dropdown Ends */
+
+.hero {
+  font-family: var(--overpass);
+  color: var(--white);
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+.hero p {
+  font-weight: 300;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.cta button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-family: var(--ubuntu);
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 30px;
+  margin: 30px 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cta .primary-btn {
+  background-color: white;
+  color: var(--light-red);
+}
+
+/* Main */
+
+main {
+  font-family: var(--overpass);
+}
+
+main p {
+  color: var(--v-dark-gray-blue);
+}
+
+.heading {
+  font-family: var(--overpass);
+  color: var(--very-dark-blue);
+  font-size: 1.5rem;
+}
+
+.feature,
+.highlight {
+  padding: 0 20px;
+  padding-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.feature h2 {
+  padding: 50px 0;
+}
+
+.feature h3 {
+  padding: 20px;
+}
+
+.feature p {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background-image: linear-gradient(90deg, #2c2d3f, #3f4164);
+  color: var(--white);
+  padding: 100px 20px;
+  border-radius: 0 100px 0 100px;
+  margin-top: 200px;
+  position: relative;
+}
+
+.highlight .pic {
+  position: absolute;
+  bottom: 0;
+  overflow: auto;
+}
+
+.highlight .heading-2 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.highlight p {
+  color: var(--white);
+  padding: 0 10px;
+}
+
+/* Footer*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 0;
+  font-family: var(--ubuntu);
+  background-color: var(--very-dark-black-blue);
+  border-radius: 0 100px 0 0;
+  color: var(--grayish-blue);
+  margin-top: 100px;
+}
+
+footer h4,
+footer h5 {
+  color: var(--white);
+}
+
+footer h4 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+footer h5 {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+footer ul {
+  margin: 10px 0;
+}
+footer ul li {
+  margin: 10px 0;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
