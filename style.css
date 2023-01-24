@@ -41,6 +41,10 @@ a {
   display: none;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 header {
   background-color: var(--light-red);
   padding: 0 20px;
@@ -216,7 +220,6 @@ main p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .feature h2 {
@@ -229,21 +232,45 @@ main p {
 
 .feature p {
   margin-bottom: 10px;
+  line-height: 25px;
 }
 
 .highlight {
+  position: relative;
   background-image: linear-gradient(90deg, #2c2d3f, #3f4164);
   color: var(--white);
   padding: 100px 20px;
   border-radius: 0 100px 0 100px;
-  margin-top: 200px;
-  position: relative;
+  margin-top: 250px;
+}
+.highlight-text {
+  margin-top: 150px;
+  z-index: 999;
 }
 
-.highlight .pic {
+.highlight-text p {
+  line-height: 25px;
+}
+
+.pic img {
   position: absolute;
-  bottom: 0;
-  overflow: auto;
+  top: -150px;
+  left: 0;
+  width: 100%;
+}
+
+.pic img:nth-child(1) {
+  z-index: 999;
+}
+.pic img:nth-child(2) {
+  /* z-index: -1; */
+  width: 140%;
+  left: -70px;
+  /* overflow: hidden; */
+}
+
+.pic img {
+  width: 100%;
 }
 
 .highlight .heading-2 {
